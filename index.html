@@ -3,111 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PUNJAB AI - Satnam Singh</title>
+<title>PUNJAB AI - Real Voice AI</title>
 <style>
 body{margin:0;font-family:Arial;background:#0f0f0f;color:white;text-align:center}
-.header{background:linear-gradient(90deg,#ff6600,#fff,#138808);padding:15px;color:black;font-weight:bold}
-.main{padding:20px}
-h1{font-size:38px;color:#00ffcc}
-.card{background:#1a1a1a;border:1px solid #333;padding:20px;border-radius:20px;margin:15px 0}
-.btn{padding:16px 30px;border-radius:50px;border:none;font-size:18px;font-weight:bold;margin:8px}
-.btn1{background:#00ffcc;color:black}
-.btn2{background:white;color:black}
-.chatbox{display:none;background:white;color:black;padding:20px;border-radius:15px;margin-top:20px;text-align:left}
-input{width:75%;padding:12px;border-radius:10px;border:1px solid #ccc}
+.header{background:linear-gradient(90deg,#ff6600,#fff,#138808);padding:12px;color:#000;font-weight:bold}
+.main{padding:12px}
+h1{color:#00ffcc;font-size:32px;margin:10px}
+.chatbox{background:white;color:black;padding:12px;border-radius:15px;text-align:left}
+#chat{height:320px;overflow-y:auto;background:#f5f5f5;padding:10px;border-radius:10px;margin-bottom:10px}
+.msg{padding:12px;border-radius:12px;margin:8px 0;max-width:92%;line-height:1.5}
+.user{background:#00ffcc;color:#000;margin-left:auto;text-align:right;font-weight:bold}
+.ai{background:white;border:1px solid #ddd;color:#111}
+.row{display:flex;gap:6px}
+input{flex:1;padding:12px;border-radius:10px;border:1px solid #ccc}
+.btnS{padding:12px 16px;background:#00ffcc;border:none;border-radius:10px;font-weight:bold}
+.btnV{padding:6px 10px;background:#eee;border:none;border-radius:8px;margin-top:6px}
+.btn{padding:12px 24px;border-radius:50px;border:none;font-weight:bold;margin:5px}
+.btnW{background:white;color:black}
 </style>
 </head>
 <body>
-<div class="header">🇮🇳 ਪੰਜਾਬ ਦੀ ਪਹਿਲੀ AI Website - Mansa</div>
-<div class="main">
-<h1>🤖 PUNJAB AI 🦁</h1>
-<h2 style="color:#00ffcc">ਵੈਲਕਮ ਟੂ ਪੰਜਾਬੀ AI</h2>
-<h3>ਪੰਜਾਬ AI - ਵੈਲਕਮ, ਸਵਾਗਤ ਹੈ ਤੁਹਾਡਾ!</h3>
-
-<div class="card">
-<p>👋 ਸਤਨਾਮ ਸਿੰਘ ਦੀ AI ਦੁਨੀਆ ਵਿੱਚ ਸਵਾਗਤ ਹੈ</p>
-</div>
-
-<button class="btn btn1" onclick="document.getElementById('ai').style.display='block'">🚀 AI ਵਿੱਚ ਦਾਖਲ ਹੋਵੋ</button>
-<br>
-<button class="btn btn2" onclick="window.open('https://wa.me/?text=ਵੇਖੋ%20ਮਾਨਸਾ%20ਦੀ%20ਪਹਿਲੀ%20AI%20Website%20https://satnamsinghsatnam028-coder.github.io/punjabi-ai/','_blank')">📲 WhatsApp ਤੇ Share ਕਰੋ</button>
-
-<div id="ai" class="chatbox">
-<h3>🤖 Punjab AI Chat</h3>
-<p>ਹੁਣ ਤੁਸੀਂ AI ਨਾਲ ਗੱਲ ਕਰ ਸਕਦੇ ਹੋ!</p>
-<input id="q" placeholder="ਕੁਝ ਲਿਖੋ... ਜਿਵੇਂ - ਤੂੰ ਕੌਣ ਐ?">
-<button onclick="let v=document.getElementById('q').value;document.getElementById('ans').innerHTML='ਤੁਸੀਂ ਪੁੱਛਿਆ: '+v+'<br><br>🤖 AI ਜਵਾਬ: ਵਾਹ ਜੀ ਵਾਹ! ਮੈਂ ਪੰਜਾਬ AI ਹਾਂ, ਮਾਨਸਾ ਤੋਂ! ਤੁਹਾਡਾ ਸਵਾਗਤ ਹੈ!'" style="padding:10px;background:#00ffcc;border:none;border-radius:10px">ਭੇਜੋ</button>
-<p id="ans" style="margin-top:15px;background:#eee;padding:15px;border-radius:10px"></p>
-</div>
-
-<p style="color:#888;margin-top:30px">Made with ❤️ in Mansa</p>
-</div>
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PUNJAB AI - Real AI Chat</title>
-<style>
-body{margin:0;font-family:Arial;background:#0f0f0f;color:white;text-align:center}
-.header{background:linear-gradient(90deg,#ff6600,#fff,#138808);padding:12px;color:black;font-weight:bold}
-.main{padding:15px}
-h1{color:#00ffcc}
-.card{background:#1a1a1a;border:1px solid #333;padding:15px;border-radius:15px;margin:10px 0}
-.btn{padding:14px 28px;border-radius:50px;border:none;font-size:17px;font-weight:bold;margin:6px}
-.btn1{background:#00ffcc;color:black}
-.btn2{background:white;color:black}
-.chatbox{background:white;color:black;padding:15px;border-radius:15px;margin-top:15px;text-align:left;min-height:300px}
-#chat{height:250px;overflow-y:auto;background:#f5f5f5;padding:10px;border-radius:10px;margin-bottom:10px}
-.msg{padding:10px;border-radius:10px;margin:6px 0;max-width:90%}
-.user{background:#00ffcc;color:black;margin-left:auto;text-align:right}
-.ai{background:white;border:1px solid #ddd}
-input{width:68%;padding:12px;border-radius:10px;border:1px solid #ccc}
-#sendBtn{padding:12px 18px;background:#00ffcc;border:none;border-radius:10px;font-weight:bold}
-</style>
-</head>
-<body>
-<div class="header">🇮🇳 PUNJAB AI - ਦੁਨੀਆਂ ਦੀਆਂ ਸਾਰੀਆਂ ਭਾਸ਼ਾਵਾਂ ਵਿੱਚ ਗੱਲ ਕਰੋ</div>
+<div class="header">🇮🇳 PUNJAB AI - ਬੋਲਣ ਵਾਲਾ ਅਸਲੀ AI - Mansa</div>
 <div class="main">
 <h1>🤖 PUNJAB AI 🦁</h1>
 <p>ਪੰਜਾਬ AI - ਵੈਲਕਮ, ਸਵਾਗਤ ਹੈ ਤੁਹਾਡਾ!</p>
-
-<div id="chatArea" class="chatbox">
+<div class="chatbox">
 <div id="chat">
-<div class="msg ai">🤖 ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ ਜੀ! ਮੈਂ Punjab AI ਹਾਂ। ਤੁਸੀਂ ਕਿਸੇ ਵੀ ਭਾਸ਼ਾ ਵਿੱਚ ਗੱਲ ਕਰੋ - ਪੰਜਾਬੀ, ਹਿੰਦੀ, English - ਮੈਂ ਉਸੇ ਭਾਸ਼ਾ ਵਿੱਚ ਜਵਾਬ ਦੇਵਾਂਗਾ!</div>
+<div class="msg ai">🤖 ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ ਜੀ! ਮੈਂ Punjab AI ਹਾਂ। ਕੋਈ ਵੀ ਸਵਾਲ ਪੁੱਛੋ - ਪੰਜਾਬੀ, ਹਿੰਦੀ, English। ਮੈਂ ਉਸੇ ਭਾਸ਼ਾ ਵਿੱਚ ਬੋਲ ਕੇ ਜਵਾਬ ਦੇਵਾਂਗਾ!</div>
 </div>
-<input id="q" placeholder="ਕੁਝ ਵੀ ਪੁੱਛੋ...">
-<button id="sendBtn" onclick="askAI()">ਭੇਜੋ</button>
+<div class="row">
+<input id="q" placeholder="ਇੱਥੇ ਲਿਖੋ... ਜਿਵੇਂ ਪੰਜਾਬ ਵਿੱਚ ਕਿੰਨੇ ਜ਼ਿਲੇ ਹਨ?">
+<button class="btnS" onclick="askAI()">ਭੇਜੋ</button>
 </div>
-
+</div>
 <br>
-<button class="btn btn2" onclick="window.open('https://wa.me/?text=ਵੇਖੋ%20Punjab%20AI%20-%20ਕਿਸੇ%20ਵੀ%20ਭਾਸ਼ਾ%20ਵਿੱਚ%20ਗੱਲ%20ਕਰੋ%20https://satnamsinghsatnam028-coder.github.io/punjabi-ai/','_blank')">📲 Share ਕਰੋ</button>
-<p style="color:#888;margin-top:20px">Made in Mansa, Punjab</p>
+<button class="btn btnW" onclick="window.open('https://wa.me/?text=Punjab%20AI%20Voice%20AI%20https://satnamsinghsatnam028-coder.github.io/punjabi-ai/','_blank')">📲 WhatsApp Share</button>
+<p style="color:#888">Made with ❤️ in Mansa</p>
 </div>
-
 <script>
+let lastAnswer="";
+function speak(text){
+if('speechSynthesis' in window){
+speechSynthesis.cancel();
+let u=new SpeechSynthesisUtterance(text);
+let lang='pa-IN';
+if(/[\u0900-\u097F]/.test(text)) lang='hi-IN';
+else if(/[a-zA-Z]/.test(text) && !/[ਅ-ਔ]/.test(text)) lang='en-IN';
+u.lang=lang; u.rate=0.9;
+speechSynthesis.speak(u);
+}
+}
 async function askAI(){
 let input=document.getElementById('q');
 let chat=document.getElementById('chat');
 let text=input.value.trim();
 if(!text) return;
-chat.innerHTML+=`<div class="msg user">ਤੁਸੀਂ: ${text}</div>`;
+chat.innerHTML+=`<div class="msg user">${text}</div>`;
 input.value='';
-chat.innerHTML+=`<div class="msg ai" id="loading">🤖 ਸੋਚ ਰਿਹਾ ਹਾਂ...</div>`;
+let id='a'+Date.now();
+chat.innerHTML+=`<div class="msg ai" id="${id}">🤖 ਸੋਚ ਰਿਹਾ ਹਾਂ, Internet ਤੋਂ ਜਵਾਬ ਲਿਆ ਰਿਹਾ ਹਾਂ...</div>`;
 chat.scrollTop=chat.scrollHeight;
 try{
-let response=await fetch('https://text.pollinations.ai/'+encodeURIComponent(text+' - Reply in same language as user asked. You are Punjab AI from Mansa Punjab, friendly.'));
-let data=await response.text();
-document.getElementById('loading').remove();
-chat.innerHTML+=`<div class="msg ai">🤖 ${data}</div>`;
+let prompt=`You are Punjab AI from Mansa Punjab. Answer accurately with real facts from internet. Question: ${text}. Rules: 1. Reply in SAME language as question (Punjabi if asked in Punjabi, Hindi if Hindi, English if English). 2. Do NOT repeat the question. 3. Give short, correct answer. 4. For Punjab districts, answer 23 districts (as of 2026).`;
+let res=await fetch('https://text.pollinations.ai/'+encodeURIComponent(prompt));
+let data=await res.text();
+if(!data || data.length<5) throw new Error('empty');
+lastAnswer=data;
+document.getElementById(id).innerHTML=`🤖 ${data}<br><button class="btnV" onclick="speak(\`${data.replace(/`/g,'').replace(/"/g,'')}\`)">🔊 ਬੋਲ ਕੇ ਸੁਣੋ</button>`;
+speak(data);
 }catch(e){
-document.getElementById('loading').remove();
-chat.innerHTML+=`<div class="msg ai">🤖 ਮਾਫ ਕਰਨਾ ਜੀ, ਨੈੱਟਵਰਕ Slow ਹੈ, ਦੁਬਾਰਾ Try ਕਰੋ!</div>`;
+document.getElementById(id).innerHTML=`🤖 ਮਾਫ ਕਰਨਾ ਜੀ, Internet slow ਹੈ। ਦੁਬਾਰਾ Try ਕਰੋ। ਜੇ ਪੰਜਾਬ ਦੇ ਜ਼ਿਲਿਆਂ ਬਾਰੇ ਪੁੱਛਿਆ ਤਾਂ - ਪੰਜਾਬ ਵਿੱਚ 23 ਜ਼ਿਲੇ ਹਨ (2026 ਤੱਕ)।<br><button class="btnV" onclick="speak('ਪੰਜਾਬ ਵਿੱਚ 23 ਜ਼ਿਲੇ ਹਨ')">🔊 ਬੋਲ ਕੇ ਸੁਣੋ</button>`;
 }
 chat.scrollTop=chat.scrollHeight;
 }
+document.getElementById('q').addEventListener('keydown',function(e){if(e.key==='Enter') askAI();});
 </script>
 </body>
 </html>
