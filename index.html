@@ -44,4 +44,70 @@ input{width:75%;padding:12px;border-radius:10px;border:1px solid #ccc}
 </div>
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PUNJAB AI - Real AI Chat</title>
+<style>
+body{margin:0;font-family:Arial;background:#0f0f0f;color:white;text-align:center}
+.header{background:linear-gradient(90deg,#ff6600,#fff,#138808);padding:12px;color:black;font-weight:bold}
+.main{padding:15px}
+h1{color:#00ffcc}
+.card{background:#1a1a1a;border:1px solid #333;padding:15px;border-radius:15px;margin:10px 0}
+.btn{padding:14px 28px;border-radius:50px;border:none;font-size:17px;font-weight:bold;margin:6px}
+.btn1{background:#00ffcc;color:black}
+.btn2{background:white;color:black}
+.chatbox{background:white;color:black;padding:15px;border-radius:15px;margin-top:15px;text-align:left;min-height:300px}
+#chat{height:250px;overflow-y:auto;background:#f5f5f5;padding:10px;border-radius:10px;margin-bottom:10px}
+.msg{padding:10px;border-radius:10px;margin:6px 0;max-width:90%}
+.user{background:#00ffcc;color:black;margin-left:auto;text-align:right}
+.ai{background:white;border:1px solid #ddd}
+input{width:68%;padding:12px;border-radius:10px;border:1px solid #ccc}
+#sendBtn{padding:12px 18px;background:#00ffcc;border:none;border-radius:10px;font-weight:bold}
+</style>
+</head>
+<body>
+<div class="header">🇮🇳 PUNJAB AI - ਦੁਨੀਆਂ ਦੀਆਂ ਸਾਰੀਆਂ ਭਾਸ਼ਾਵਾਂ ਵਿੱਚ ਗੱਲ ਕਰੋ</div>
+<div class="main">
+<h1>🤖 PUNJAB AI 🦁</h1>
+<p>ਪੰਜਾਬ AI - ਵੈਲਕਮ, ਸਵਾਗਤ ਹੈ ਤੁਹਾਡਾ!</p>
 
+<div id="chatArea" class="chatbox">
+<div id="chat">
+<div class="msg ai">🤖 ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ ਜੀ! ਮੈਂ Punjab AI ਹਾਂ। ਤੁਸੀਂ ਕਿਸੇ ਵੀ ਭਾਸ਼ਾ ਵਿੱਚ ਗੱਲ ਕਰੋ - ਪੰਜਾਬੀ, ਹਿੰਦੀ, English - ਮੈਂ ਉਸੇ ਭਾਸ਼ਾ ਵਿੱਚ ਜਵਾਬ ਦੇਵਾਂਗਾ!</div>
+</div>
+<input id="q" placeholder="ਕੁਝ ਵੀ ਪੁੱਛੋ...">
+<button id="sendBtn" onclick="askAI()">ਭੇਜੋ</button>
+</div>
+
+<br>
+<button class="btn btn2" onclick="window.open('https://wa.me/?text=ਵੇਖੋ%20Punjab%20AI%20-%20ਕਿਸੇ%20ਵੀ%20ਭਾਸ਼ਾ%20ਵਿੱਚ%20ਗੱਲ%20ਕਰੋ%20https://satnamsinghsatnam028-coder.github.io/punjabi-ai/','_blank')">📲 Share ਕਰੋ</button>
+<p style="color:#888;margin-top:20px">Made in Mansa, Punjab</p>
+</div>
+
+<script>
+async function askAI(){
+let input=document.getElementById('q');
+let chat=document.getElementById('chat');
+let text=input.value.trim();
+if(!text) return;
+chat.innerHTML+=`<div class="msg user">ਤੁਸੀਂ: ${text}</div>`;
+input.value='';
+chat.innerHTML+=`<div class="msg ai" id="loading">🤖 ਸੋਚ ਰਿਹਾ ਹਾਂ...</div>`;
+chat.scrollTop=chat.scrollHeight;
+try{
+let response=await fetch('https://text.pollinations.ai/'+encodeURIComponent(text+' - Reply in same language as user asked. You are Punjab AI from Mansa Punjab, friendly.'));
+let data=await response.text();
+document.getElementById('loading').remove();
+chat.innerHTML+=`<div class="msg ai">🤖 ${data}</div>`;
+}catch(e){
+document.getElementById('loading').remove();
+chat.innerHTML+=`<div class="msg ai">🤖 ਮਾਫ ਕਰਨਾ ਜੀ, ਨੈੱਟਵਰਕ Slow ਹੈ, ਦੁਬਾਰਾ Try ਕਰੋ!</div>`;
+}
+chat.scrollTop=chat.scrollHeight;
+}
+</script>
+</body>
+</html>
