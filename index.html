@@ -3,41 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PUNJAB AI - Satnam Singh | Mansa</title>
+<title>PUNJAB AI - Satnam Singh</title>
 <style>
 body{margin:0;font-family:Arial;background:#0f0f0f;color:white;text-align:center}
-.header{background:linear-gradient(90deg,#ff6600,#fff,#138808);padding:20px;color:black;font-weight:bold;font-size:18px}
-.main{padding:30px 20px}
-h1{font-size:38px;background:linear-gradient(90deg,#ff6600,white,#00ffcc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:glow 2s infinite}
-@keyframes glow{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
-.card{background:#1a1a1a;border:1px solid #333;padding:25px;border-radius:20px;margin:20px 0}
+.header{background:linear-gradient(90deg,#ff6600,#fff,#138808);padding:15px;color:black;font-weight:bold}
+.main{padding:20px}
+h1{font-size:38px;color:#00ffcc}
+.card{background:#1a1a1a;border:1px solid #333;padding:20px;border-radius:20px;margin:15px 0}
 .btn{padding:16px 30px;border-radius:50px;border:none;font-size:18px;font-weight:bold;margin:8px}
 .btn1{background:#00ffcc;color:black}
 .btn2{background:white;color:black}
-.punjab{font-size:60px;animation:bounce 1.5s infinite}
-@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.chatbox{display:none;background:white;color:black;padding:20px;border-radius:15px;margin-top:20px;text-align:left}
+input{width:75%;padding:12px;border-radius:10px;border:1px solid #ccc}
 </style>
 </head>
 <body>
-<div class="header">🇮🇳 ਪੰਜਾਬ ਦੀ ਪਹਿਲੀ AI Website - Mansa Punjab 🇮🇳</div>
+<div class="header">🇮🇳 ਪੰਜਾਬ ਦੀ ਪਹਿਲੀ AI Website - Mansa</div>
 <div class="main">
-<div class="punjab">🤖🦁</div>
-<h1>PUNJAB AI</h1>
+<h1>🤖 PUNJAB AI 🦁</h1>
 <h2 style="color:#00ffcc">ਵੈਲਕਮ ਟੂ ਪੰਜਾਬੀ AI</h2>
-<h3>ਸਵਾਗਤ ਹੈ ਤੁਹਾਡਾ!</h3>
+<h3>ਪੰਜਾਬ AI - ਵੈਲਕਮ, ਸਵਾਗਤ ਹੈ ਤੁਹਾਡਾ!</h3>
 
 <div class="card">
-<p style="font-size:20px">👋 <b>ਸਤਨਾਮ ਸਿੰਘ</b> ਦੀ AI ਦੁਨੀਆ ਵਿੱਚ ਤੁਹਾਡਾ ਸਵਾਗਤ ਹੈ</p>
-<p>ਮਾਨਸਾ, ਪੰਜਾਬ ਤੋਂ ਪੂਰੀ ਦੁਨੀਆ ਲਈ</p>
+<p>👋 ਸਤਨਾਮ ਸਿੰਘ ਦੀ AI ਦੁਨੀਆ ਵਿੱਚ ਸਵਾਗਤ ਹੈ</p>
 </div>
 
-<button class="btn btn1" onclick="alert('🔥 ਪੰਜਾਬ AI ਵਿੱਚ ਸਵਾਗਤ ਹੈ ਤੁਹਾਡਾ! ਤੁਸੀਂ ਮਾਨਸਾ ਦੀ ਪਹਿਲੀ AI Website ਤੇ ਹੋ! 🔥')">🚀 AI ਵਿੱਚ ਦਾਖਲ ਹੋਵੋ</button>
+<button class="btn btn1" onclick="document.getElementById('ai').style.display='block'">🚀 AI ਵਿੱਚ ਦਾਖਲ ਹੋਵੋ</button>
 <br>
-<button class="btn btn2" onclick="window.open('https://wa.me/?text=ਵੇਖੋ%20ਮਾਨਸਾ%20ਦੀ%20ਪਹਿਲੀ%20AI%20Website%20🔥%20https://satnamsinghsatnam028-coder.github.io/punjabi-ai/','_blank')">📲 WhatsApp ਤੇ Share ਕਰੋ</button>
+<button class="btn btn2" onclick="window.open('https://wa.me/?text=ਵੇਖੋ%20ਮਾਨਸਾ%20ਦੀ%20ਪਹਿਲੀ%20AI%20Website%20https://satnamsinghsatnam028-coder.github.io/punjabi-ai/','_blank')">📲 WhatsApp ਤੇ Share ਕਰੋ</button>
 
-<br><br>
-<p style="color:#888">Made with ❤️ in Mansa, Punjab</p>
-<p style="color:#00ffcc">#PunjabAI #Mansa #Viral</p>
+<div id="ai" class="chatbox">
+<h3>🤖 Punjab AI Chat</h3>
+<p>ਹੁਣ ਤੁਸੀਂ AI ਨਾਲ ਗੱਲ ਕਰ ਸਕਦੇ ਹੋ!</p>
+<input id="q" placeholder="ਕੁਝ ਲਿਖੋ... ਜਿਵੇਂ - ਤੂੰ ਕੌਣ ਐ?">
+<button onclick="let v=document.getElementById('q').value;document.getElementById('ans').innerHTML='ਤੁਸੀਂ ਪੁੱਛਿਆ: '+v+'<br><br>🤖 AI ਜਵਾਬ: ਵਾਹ ਜੀ ਵਾਹ! ਮੈਂ ਪੰਜਾਬ AI ਹਾਂ, ਮਾਨਸਾ ਤੋਂ! ਤੁਹਾਡਾ ਸਵਾਗਤ ਹੈ!'" style="padding:10px;background:#00ffcc;border:none;border-radius:10px">ਭੇਜੋ</button>
+<p id="ans" style="margin-top:15px;background:#eee;padding:15px;border-radius:10px"></p>
+</div>
+
+<p style="color:#888;margin-top:30px">Made with ❤️ in Mansa</p>
 </div>
 </body>
 </html>
+
