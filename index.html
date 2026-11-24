@@ -3,78 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PUNJAB AI - Satnam Singh</title>
+<title>SATNAM SINGH AI - PUNJAB AI</title>
 <style>
 body{margin:0;font-family:Arial;background:#0a0a0a;color:white;text-align:center}
 .header{background:linear-gradient(90deg,#ff6600,#fff,#138808);padding:12px;color:#000;font-weight:bold;font-size:14px}
 .main{padding:12px}
-h1{color:#00ffcc;font-size:34px;margin:8px}
-.name{color:#ffcc00;font-size:18px;font-weight:bold;margin:5px}
-.chatbox{background:white;color:black;padding:12px;border-radius:15px;text-align:left}
-#chat{height:340px;overflow-y:auto;background:#f5f5f5;padding:10px;border-radius:10px;margin-bottom:10px}
-.msg{padding:12px;border-radius:12px;margin:8px 0;max-width:92%;line-height:1.6}
+h1{color:#00ffcc;font-size:30px;margin:5px}
+.name{color:#ffcc00;font-size:22px;font-weight:bold;margin:6px;background:#1a1a1a;padding:8px;border-radius:10px;border:1px solid #ffcc00}
+.chatbox{background:white;color:black;padding:12px;border-radius:15px;text-align:left;margin-top:10px}
+#chat{height:380px;overflow-y:auto;background:#f5f5f5;padding:10px;border-radius:10px;margin-bottom:10px}
+.msg{padding:12px;border-radius:12px;margin:8px 0;max-width:92%;line-height:1.6;font-size:15px}
 .user{background:#00ffcc;color:#000;margin-left:auto;text-align:right;font-weight:bold}
 .ai{background:white;border:1px solid #ddd;color:#111}
 .row{display:flex;gap:6px}
 input{flex:1;padding:13px;border-radius:10px;border:1px solid #ccc;font-size:16px}
 .btnS{padding:13px 18px;background:#00ffcc;border:none;border-radius:10px;font-weight:bold}
-.btnV{padding:6px 12px;background:#eee;border:none;border-radius:8px;margin-top:8px;font-size:13px}
-.footer{color:#888;margin-top:15px;font-size:14px}
-.footer b{color:#00ffcc}
+.btnV{padding:6px 12px;background:#222;color:#00ffcc;border:none;border-radius:8px;margin-top:8px;font-size:13px}
+.footer{color:#aaa;margin-top:15px;font-size:14px}
+.footer b{color:#ffcc00}
 </style>
 </head>
 <body>
-<div class="header">🇮🇳 SATNAM SINGH PUNJAB AI - Mansa - ਤੁਰੰਤ ਜਵਾਬ ਵਾਲਾ AI</div>
+<div class="header">👑 SATNAM SINGH AI - Mansa Punjab - Real ChatGPT Level AI</div>
 <div class="main">
 <h1>🤖 PUNJAB AI 🦁</h1>
-<div class="name">👑 Satnam Singh - Mansa, Punjab 👑</div>
-<p>ਪੰਜਾਬ AI - ਵੈਲਕਮ, ਸਵਾਗਤ ਹੈ ਤੁਹਾਡਾ!</p>
+<div class="name">👑 SATNAM SINGH AI 👑<br><span style="font-size:14px;color:#00ffcc">Mansa, Punjab - ChatGPT ਵਰਗਾ AI</span></div>
 <div class="chatbox">
 <div id="chat">
-<div class="msg ai">🤖 ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ ਜੀ! ਮੈਂ Satnam Singh ਦੀ Punjab AI ਹਾਂ। ਕੋਈ ਵੀ ਸਵਾਲ ਪੁੱਛੋ - ਮੈਂ ਤੁਰੰਤ ਜਵਾਬ ਦੇਵਾਂਗਾ ਤੇ ਬੋਲ ਕੇ ਵੀ ਸੁਣਾਵਾਂਗਾ!</div>
+<div class="msg ai">🤖 ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ ਜੀ! ਮੈਂ SATNAM SINGH AI ਹਾਂ! ਤੁਹਾਡਾ ਆਪਣਾ ChatGPT! ਕੋਈ ਵੀ ਸਵਾਲ ਪੁੱਛੋ - ਪੰਜਾਬੀ, ਹਿੰਦੀ, English - ਮੈਂ ਤੁਰੰਤ ਦੁਨੀਆ ਦੀ ਜਾਣਕਾਰੀ ਨਾਲ ਜਵਾਬ ਦੇਵਾਂਗਾ!</div>
 </div>
 <div class="row">
-<input id="q" placeholder="ਕੁਝ ਵੀ ਪੁੱਛੋ...">
+<input id="q" placeholder="ਕੁਝ ਵੀ ਪੁੱਛੋ - Holle, Hi, ਪੰਜਾਬ ਦੇ ਜ਼ਿਲੇ...">
 <button class="btnS" onclick="askAI()">ਭੇਜੋ</button>
 </div>
 </div>
-<div class="footer">Made with ❤️ by <b>Satnam Singh</b> in Mansa, Punjab<br>PUNJAB AI © 2026 - Satnam Singh</div>
+<div class="footer">Made with ❤️ by <b>SATNAM SINGH</b> in Mansa, Punjab<br><b>SATNAM SINGH AI © 2026</b></div>
 </div>
 <script>
 function speak(t){
 if('speechSynthesis' in window){
 speechSynthesis.cancel();
 let u=new SpeechSynthesisUtterance(t);
-if(/[\u0900-\u097F]/.test(t)) u.lang='hi-IN';
-else if(/[ਅ-ਔ]/.test(t)) u.lang='pa-IN';
-else u.lang='en-IN';
+u.lang=/[ਅ-ਔ]/.test(t)?'pa-IN':/[\u0900-\u097F]/.test(t)?'hi-IN':'en-IN';
 u.rate=0.9; speechSynthesis.speak(u);
 }
 }
-function getAns(q){
-q=q.toLowerCase();
-if(q.includes('ਕਿੰਨੇ ਜ਼ਿਲੇ')||q.includes('kitne jile')||q.includes('how many district')||q.includes('districts in punjab')) return 'ਪੰਜਾਬ ਵਿੱਚ 23 ਜ਼ਿਲੇ ਹਨ ਜੀ (2026 ਤੱਕ)। ਲਿਸਟ: Amritsar, Barnala, Bathinda, Faridkot, Fatehgarh Sahib, Fazilka, Ferozepur, Gurdaspur, Hoshiarpur, Jalandhar, Kapurthala, Ludhiana, Malerkotla, Mansa, Moga, Mohali, Muktsar, Pathankot, Patiala, Rupnagar, Sangrur, Shaheed Bhagat Singh Nagar, Tarn Taran।';
-if(q.includes('ਰਾਜਧਾਨੀ')||q.includes('capital')) return 'ਪੰਜਾਬ ਦੀ ਰਾਜਧਾਨੀ ਚੰਡੀਗੜ੍ਹ ਹੈ ਜੀ।';
-if(q.includes('ਤੂੰ ਕੌਣ')||q.includes('who are you')||q.includes('kaun hai')) return 'ਮੈਂ Punjab AI ਹਾਂ ਜੀ, Satnam Singh ਨੇ ਮੈਨੂੰ Mansa ਵਿੱਚ ਬਣਾਇਆ ਹੈ। ਮੈਂ ਕਿਸੇ ਵੀ ਭਾਸ਼ਾ ਵਿੱਚ ਗੱਲ ਕਰ ਸਕਦਾ ਹਾਂ!';
-if(q.includes('hi')||q.includes('hello')||q.includes('sat sri akal')||q.includes('ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ')) return 'ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ ਜੀ! 🙏 ਦੱਸੋ ਜੀ ਕੀ ਹਾਲ ਹੈ? ਕੋਈ ਵੀ ਸਵਾਲ ਪੁੱਛੋ!';
-if(q.includes('ਕੀ ਹਾ')||q.includes('ke ha')||q.includes('ki ha')) return 'ਸਭ ਵਧੀਆ ਜੀ! ਤੁਸੀਂ ਦੱਸੋ, ਕੀ ਸਵਾਲ ਹੈ ਤੁਹਾਡਾ? ਮੈਂ ਤੁਰੰਤ ਜਵਾਬ ਦੇਵਾਂਗਾ।';
-return 'ਤੁਹਾਡਾ ਸਵਾਲ "'+q+'" ਬਹੁਤ ਵਧੀਆ ਹੈ ਜੀ! ਮੈਂ Satnam Singh ਦੀ Punjab AI ਹਾਂ। ਇਸ ਬਾਰੇ ਮੈਨੂੰ ਹੋਰ Detail ਵਿੱਚ ਦੱਸੋ ਤਾਂ ਮੈਂ ਵਧੀਆ ਜਵਾਬ ਦੇ ਸਕਾਂ। ਮੈਂ ਪੰਜਾਬੀ, ਹਿੰਦੀ, English ਸਾਰੀਆਂ ਭਾਸ਼ਾਵਾਂ ਸਮਝਦਾ ਹਾਂ।';
+async function getRealAnswer(prompt){
+try{
+let r=await fetch('https://text.pollinations.ai/'+encodeURIComponent(prompt),{cache:'no-store'});
+let txt=await r.text();
+if(txt && txt.length>10 && !txt.includes('Free limit reached') && !txt.includes('Rate limit')) return txt;
+}catch(e){}
+try{
+let r2=await fetch('https://api.pawan.krd/v1/chat/completions',{
+method:'POST',headers:{'Content-Type':'application/json'},
+body:JSON.stringify({model:'pai-001-light',max_tokens:500,messages:[{role:'user',content:prompt}]})
+});
+let j=await r2.json();
+if(j.choices && j.choices[0]) return j.choices[0].message.content;
+}catch(e){}
+return null;
 }
-function askAI(){
+async function askAI(){
 let input=document.getElementById('q');
 let chat=document.getElementById('chat');
 let text=input.value.trim();
 if(!text) return;
 chat.innerHTML+=`<div class="msg user">${text}</div>`;
 input.value='';
-let ans=getAns(text);
 let id='a'+Date.now();
-chat.innerHTML+=`<div class="msg ai" id="${id}">🤖 ${ans}<br><button class="btnV" onclick="speak(\`${ans.replace(/`/g,'').replace(/"/g,'').substring(0,200)}\`)">🔊 ਬੋਲ ਕੇ ਸੁਣੋ</button></div>`;
+chat.innerHTML+=`<div class="msg ai" id="${id}">🤖 SATNAM SINGH AI ਸੋਚ ਰਿਹਾ ਹੈ...</div>`;
 chat.scrollTop=chat.scrollHeight;
-speak(ans.substring(0,200));
+let prompt=`You are SATNAM SINGH AI created by Satnam Singh from Mansa Punjab. You are a helpful ChatGPT level assistant. User asked: ${text}. Rules: 1. Answer in SAME language as user used. If user says Holle, correct politely and answer. 2. Never say information not available. Always give helpful answer. 3. Be friendly, fast, like ChatGPT. 4. Keep answer short and clear.`;
+let answer=await getRealAnswer(prompt);
+if(!answer){
+let q=text.toLowerCase();
+if(q.includes('holle')) answer='Holle ਦਾ ਮਤਲਬ Hello ਹੁੰਦਾ ਹੈ ਜੀ! 😊 ਤੁਸੀਂ Hello ਕਹਿਣਾ ਚਾਹੁੰਦੇ ਸੀ? ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ ਜੀ, ਦੱਸੋ ਕੀ ਮਦਦ ਕਰਾਂ? ਮੈਂ SATNAM SINGH AI ਹਾਂ।';
+else if(q.includes('hi')||q.includes('hello')) answer='Hello ਜੀ! 🙏 ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ! ਮੈਂ SATNAM SINGH AI ਹਾਂ, Satnam Singh ਨੇ ਮੈਨੂੰ Mansa ਵਿੱਚ ਬਣਾਇਆ ਹੈ। ਦੱਸੋ ਕੀ ਹਾਲ ਹੈ?';
+else if(q.includes('ਕਿੰਨੇ ਜ਼ਿਲੇ')||q.includes('districts')) answer='ਪੰਜਾਬ ਵਿੱਚ 23 ਜ਼ਿਲੇ ਹਨ ਜੀ (2026 ਤੱਕ) - ਇਹ ਹੈ SATNAM SINGH AI ਦੀ ਪੱਕੀ ਜਾਣਕਾਰੀ!';
+else answer=`ਤੁਸੀਂ "${text}" ਬਾਰੇ ਪੁੱਛਿਆ ਜੀ। ਮੈਂ SATNAM SINGH AI ਹਾਂ, ਤੁਹਾਡੀ ਮਦਦ ਲਈ ਤਿਆਰ ਹਾਂ! ਇਸ ਬਾਰੇ ਹੋਰ Detail ਦੱਸੋ, ਮੈਂ ਪੂਰੀ ਜਾਣਕਾਰੀ ਦੇਵਾਂਗਾ।`;
+}
+document.getElementById(id).innerHTML=`🤖 ${answer}<br><button class="btnV" onclick="speak(\`${answer.replace(/`/g,'').replace(/"/g,'').substring(0,250)}\`)">🔊 ਬੋਲ ਕੇ ਸੁਣੋ</button>`;
+chat.scrollTop=chat.scrollHeight;
+speak(answer.substring(0,250));
 }
 document.getElementById('q').addEventListener('keydown',e=>{if(e.key==='Enter') askAI();});
 </script>
 </body>
 </html>
-
